@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -42,16 +43,14 @@ const HeroSection = () => {
             </p>
           </div>
           
-          {/* Professional Photo Placeholder */}
+          {/* Professional Photo */}
           <div className="flex justify-center lg:justify-end animate-scale-in">
-            <div className="w-80 h-80 bg-gradient-to-br from-electric-blue to-navy rounded-2xl shadow-2xl flex items-center justify-center">
-              <div className="text-white text-center">
-                <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl">👨‍💻</span>
-                </div>
-                <h3 className="text-xl font-semibold">Gilles Barbier</h3>
-                <p className="text-blue-100">Workflow Orchestration Expert</p>
-              </div>
+            <div className="w-80 h-80 rounded-2xl shadow-2xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
+                alt="Gilles Barbier - Workflow Orchestration Expert"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
