@@ -11,19 +11,19 @@ const FAQSection = () => {
     },
     {
       question: "Do you only work with specific tech stacks?",
-      answer: "Gilles is technology-agnostic but opinionated about patterns. Whether you're on AWS/Azure/GCP, Node.js/Python/Java, or Kafka/Pulsar/EventBridge—good orchestration principles apply universally."
+      answer: "I am technology-agnostic but opinionated about patterns. Whether you're on AWS/Azure/GCP, Node.js/Python/Java, or Kafka/Pulsar/EventBridge—good orchestration principles apply universally."
     },
     {
       question: "What if you're not available when we need ongoing support?",
-      answer: "All projects include comprehensive documentation and team knowledge transfer. Plus, Gilles maintains a network of vetted specialists who can continue implementation using his blueprints."
+      answer: "All projects include comprehensive documentation and team knowledge transfer. Plus, I maintain a network of vetted specialists who can continue implementation using my blueprints."
     },
     {
       question: "How do you handle confidential/proprietary systems?",
-      answer: "Full NDAs are standard. Gilles has worked with financial trading systems, healthcare data pipelines, and other highly sensitive environments. Security and confidentiality are non-negotiable."
+      answer: "Full NDAs are standard. I have worked with financial trading systems, healthcare data pipelines, and other highly sensitive environments. Security and confidentiality are non-negotiable."
     },
     {
       question: "What if my team lacks orchestration experience?",
-      answer: "Gilles includes extensive knowledge transfer in every engagement. Your team will understand not just what we built, but why—so they can maintain and extend it confidently. Training materials and documentation included."
+      answer: "I include extensive knowledge transfer in every engagement. Your team will understand not just what we built, but why—so they can maintain and extend it confidently. Training materials and documentation included."
     }
   ];
 

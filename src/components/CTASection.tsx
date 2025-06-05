@@ -13,7 +13,7 @@ const CTASection = () => {
           Get Your Free Architecture Assessment
         </h2>
         <p className="text-xl text-blue-100 mb-10 text-center max-w-2xl mx-auto">
-          30-minute Architecture Assessment with Gilles to diagnose your specific scaling bottlenecks. 
+          30-minute Architecture Assessment with Me to diagnose your specific scaling bottlenecks. 
           I'll identify your 3 biggest workflow risks and the exact fixes needed—completely free.
         </p>
         
