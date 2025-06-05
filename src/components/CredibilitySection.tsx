@@ -85,16 +85,8 @@ const CredibilitySection = () => {
         {/* Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           {metrics.map((metric, i) => {
-            // Minimal tech icons for each metric
-            const icons = [
-              <svg key="icon0" className="w-7 h-7 text-success-green mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>, // check
-              <svg key="icon1" className="w-7 h-7 text-electric-blue mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>, // clock
-              <svg key="icon2" className="w-7 h-7 text-navy mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 6-6"/></svg>, // flow/arrow
-              <svg key="icon3" className="w-7 h-7 text-warning-amber mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 19V5m0 0l-7 7m7-7l7 7"/></svg>
-            ];
             return (
               <Card key={i} className="bg-white border border-gray-100 rounded-xl shadow-md p-8 flex flex-col items-center animate-fade-in transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                {icons[i]}
                 <span className="text-6xl md:text-7xl font-extrabold text-electric-blue mb-2 font-mono tabular-nums">
                   {typeof metric.number === 'string' ? metric.number : <CountUp end={metric.number} duration={metric.duration} prefix={metric.prefix} suffix={metric.suffix} />}
                 </span>
