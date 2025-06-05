@@ -99,7 +99,7 @@ const CredibilitySection = () => {
         {/* Logo grid (Production Track Record) */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-navy text-center mb-12">
-            Gilles' Production Track Record:
+            Gilles' Track Record:
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-20">
             {projects.map((project, i) => (
