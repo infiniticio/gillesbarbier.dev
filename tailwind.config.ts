@@ -63,12 +63,50 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				navy: '#1a365d',
-				charcoal: '#2d3748',
-				'electric-blue': '#3182ce',
-				'warm-gray': '#718096',
-				'success-green': '#38a169',
-				'bg-light': '#f7fafc',
+				// Brand colors
+				navy: {
+					DEFAULT: '#1a365d',
+					dark: '#12283e',
+					light: '#2c5282'
+				},
+				charcoal: {
+					DEFAULT: '#2d3748',
+					dark: '#1a202c',
+					light: '#4a5568'
+				},
+				'electric-blue': {
+					DEFAULT: '#3182ce',
+					500: '#3182ce',
+					dark: '#2b6cb0',
+					light: '#4299e1',
+					lightest: '#ebf8ff'
+				},
+				'warm-gray': {
+					DEFAULT: '#718096',
+					dark: '#4a5568',
+					light: '#a0aec0',
+					lightest: '#f7fafc'
+				},
+				'success-green': {
+					DEFAULT: '#38a169',
+					dark: '#2f855a',
+					light: '#48bb78',
+					lightest: '#f0fff4'
+				},
+				'warning-amber': {
+					DEFAULT: '#d69e2e',
+					dark: '#b7791f',
+					light: '#ecc94b',
+					lightest: '#fffaeb'
+				},
+				'error-red': {
+					DEFAULT: '#e53e3e',
+					dark: '#c53030',
+					light: '#fc8181',
+					lightest: '#fff5f5'
+				},
+				'bg-light': '#f8fafc',
+				'bg-dark': '#0f172a',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
