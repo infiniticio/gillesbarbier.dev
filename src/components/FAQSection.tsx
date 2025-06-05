@@ -1,5 +1,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Plus, Minus } from "lucide-react";
+import { useState } from "react";
 
 const FAQSection = () => {
   const faqs = [
@@ -25,8 +27,11 @@ const FAQSection = () => {
     }
   ];
 
+  // Track which item is open for icon state
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-light">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-blue-50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">
@@ -36,15 +41,32 @@ const FAQSection = () => {
             Common questions from CTOs and VPs Engineering
           </p>
         </div>
-        
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-100 last:border-b-0">
-                <AccordionTrigger className="px-8 py-6 text-left text-lg font-semibold text-navy hover:text-electric-blue transition-colors">
-                  {faq.question}
+                <AccordionTrigger
+                  className="flex items-center justify-between w-full px-8 py-7 text-left text-lg font-bold text-navy hover:text-electric-blue transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-electric-blue/50"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  <span className="text-lg font-bold leading-snug pr-4">
+                    {faq.question}
+                  </span>
+                  <span className="ml-auto flex-shrink-0 transition-transform duration-300">
+                    {openIndex === index ? (
+                      <Minus className="w-6 h-6 text-electric-blue" />
+                    ) : (
+                      <Plus className="w-6 h-6 text-warm-gray-400" />
+                    )}
+                  </span>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 text-warm-gray leading-relaxed">
+                <AccordionContent
+                  className="px-8 pb-7 pt-1 text-warm-gray leading-relaxed transition-all duration-400 ease-in-out"
+                  style={{
+                    transition: 'max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s',
+                  }}
+                >
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

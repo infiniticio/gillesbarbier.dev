@@ -39,10 +39,15 @@ const HeroSection = () => {
                   />
                 </div>
                 
-                {/* Floating tech badge */}
-                <div className="absolute -bottom-4 -right-4 bg-white px-5 py-2.5 rounded-full shadow-lg border border-warm-gray-100 flex items-center">
-                  <div className="w-3 h-3 bg-success-green rounded-full mr-2 animate-pulse"></div>
-                  <span className="text-sm font-medium text-charcoal">50M+ executions/mo</span>
+                {/* Floating availability badge */}
+                <div className="absolute -bottom-4 -right-4 bg-white px-5 py-2.5 rounded-full shadow-lg border border-warm-gray-100 flex items-center gap-3">
+                  <div className="w-3 h-3 bg-success-green rounded-full animate-pulse flex-shrink-0"></div>
+                  <div>
+                    <span className="text-sm font-medium text-charcoal">
+                      <span className="font-semibold">Next availability:</span> September 2025 (2 spots remaining)
+                    </span>
+                    <p className="text-xs text-warm-gray-500 mt-0.5">Based in Paris • Remote-first</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -50,16 +55,7 @@ const HeroSection = () => {
 
           {/* Content - Right Column */}
           <div className="lg:order-2 space-y-8 animate-fade-in">
-            {/* Status Badge - More prominent */}
-            <div className="inline-flex items-center gap-3 px-5 py-3 bg-bg-light rounded-xl border border-warm-gray-200 shadow-sm w-full max-w-md">
-              <div className="w-3 h-3 bg-success-green rounded-full animate-pulse flex-shrink-0"></div>
-              <div>
-                <p className="text-sm font-medium text-charcoal">
-                  <span className="font-semibold">Next availability:</span> September 2025 (2 spots remaining)
-                </p>
-                <p className="text-xs text-warm-gray-500 mt-1">Based in Paris • Remote-first</p>
-              </div>
-            </div>
+
             
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
@@ -84,30 +80,9 @@ const HeroSection = () => {
                 <span className="mr-3">Book a 30-min Architecture Assessment</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
               </Button>
-              
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-warm-gray-300 text-warm-gray-700 hover:bg-warm-gray-50 px-8 py-6 text-lg"
-              >
-                View Case Studies
-              </Button>
             </div>
             
-            {/* Trust Indicator */}
-            <div className="pt-4">
-              <div className="inline-flex items-start gap-3 bg-warm-gray-50/80 px-5 py-4 rounded-xl border border-warm-gray-100">
-                <div className="bg-success-green/10 p-1.5 rounded-lg mt-0.5">
-                  <svg className="w-5 h-5 text-success-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-medium text-charcoal">Investment Guarantee</p>
-                  <p className="text-warm-gray-600 text-sm mt-1">If my architecture audit doesn't identify improvements worth 10x the cost, you get a full refund.</p>
-                </div>
-              </div>
-            </div>
+
             
             {/* Mobile-only status badge */}
             <div className="lg:hidden mt-8">

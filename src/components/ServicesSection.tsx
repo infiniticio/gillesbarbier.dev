@@ -109,6 +109,21 @@ const ServicesSection = () => {
             ))}
           </div>
         </div>
+
+                  {/* Investment Guarantee Badge */}
+                  <div className="flex justify-center mt-6">
+            <div className="inline-flex items-start gap-3 bg-warm-gray-50/80 px-5 py-4 rounded-xl border border-warm-gray-100">
+              <div className="bg-success-green/10 p-1.5 rounded-lg mt-0.5">
+                <svg className="w-5 h-5 text-success-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-medium text-charcoal">Investment Guarantee</p>
+                <p className="text-warm-gray-600 text-sm mt-1">If my architecture audit doesn't identify improvements worth 10x the cost, you get a full refund.</p>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
   );
