@@ -66,9 +66,13 @@ const CredibilitySection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f4f8fc] relative overflow-hidden">
+      {/* Top divider for separation from Services section */}
+      <div className="absolute -top-2 left-0 w-full h-2 z-20">
+        <div className="w-full h-full bg-gradient-to-r from-transparent via-electric-blue/30 to-transparent opacity-70"></div>
+      </div>
       {/* Geometric/circuit background pattern */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\'60\' height=\'30\' viewBox=\'0 0 60 30\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'15\' cy=\'15\' r=\'14\' stroke=\'%233182ce\' stroke-opacity=\'0.18\' stroke-width=\'2\'/%3E%3Crect x=\'35\' y=\'5\' width=\'20\' height=\'20\' rx=\'5\' stroke=\'%233182ce\' stroke-opacity=\'0.12\' stroke-width=\'2\'/%3E%3C/svg%3E')", backgroundRepeat: 'repeat', backgroundSize: '120px 60px'}}></div>
+      <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'30\\' viewBox=\\'0 0 60 30\\' fill=\\'none\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Ccircle cx=\\'15\\' cy=\\'15\\' r=\\'14\\' stroke=\\'%233182ce\\' stroke-opacity=\\'0.18\\' stroke-width=\\'2\\'/%3E%3Crect x=\\'35\\' y=\\'5\\' width=\\'20\\' height=\\'20\\' rx=\\'5\\' stroke=\\'%233182ce\\' stroke-opacity=\\'0.12\\' stroke-width=\\'2\\'/%3E%3C/svg%3E')", backgroundRepeat: 'repeat', backgroundSize: '120px 60px'}}></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">

@@ -96,6 +96,42 @@
     border-color: hsl(var(--border));
     box-sizing: border-box;
   }
+  /* Focus-visible accessibility outline for all interactive elements */
+  button:focus-visible, a:focus-visible, [role="button"]:focus-visible, [tabindex]:focus-visible {
+    outline: 2.5px solid #3182ce !important; /* electric blue */
+    outline-offset: 2px;
+    transition: outline-color 0.2s;
+    z-index: 10;
+  }
+  /* Visually hidden utility for screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  /* Skip to content link for accessibility */
+  .skip-to-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #3182ce;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    z-index: 50;
+    font-weight: bold;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+  }
+  .skip-to-content:focus {
+    transform: translateY(0);
+  }
 
   html {
     scroll-behavior: smooth;

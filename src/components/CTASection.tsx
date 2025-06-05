@@ -69,16 +69,7 @@ const CTASection = () => {
           </p>
         </div>
 
-        {/* Booking/Calendar preview placeholder */}
-        <div className="bg-white/80 rounded-2xl p-6 shadow-inner flex flex-col items-center justify-center max-w-lg mx-auto mb-8 border border-electric-blue/10">
-          <div className="flex items-center gap-4 mb-2">
-            <Calendar className="w-8 h-8 text-electric-blue" />
-            <span className="font-mono font-bold text-lg text-navy">Select Your Time</span>
-          </div>
-          <div className="w-full h-24 bg-gradient-to-br from-electric-blue/10 to-white rounded-lg flex items-center justify-center text-blue-400 font-mono">
-            [Calendar Booking Widget Coming Soon]
-          </div>
-        </div>
+
       </div>
       {/* Sticky CTA for mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden flex justify-center bg-gradient-to-t from-navy/95 via-navy/80 to-transparent py-3 px-4">
