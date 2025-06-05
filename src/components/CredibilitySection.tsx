@@ -40,7 +40,7 @@ const LemlineLogo = () => (
 const CredibilitySection = () => {
   // Animated metrics config
   const metrics = [
-    { number: 50000000, label: "Executions Monthly", description: "Across 500+ companies", prefix: '', suffix: '+', duration: 2 },
+    { number: '5M', label: "Executions Monthly", description: "Across 500+ companies", prefix: '', suffix: '', duration: 0 },
     { number: 99.9, label: "Uptime Achieved", description: "In production systems", prefix: '', suffix: '%', duration: 2 },
     { number: 3, label: "Workflow Engines Built", description: "From scratch to scale", prefix: '', suffix: '', duration: 1.5 },
     { number: 90, label: "Failure Reduction", description: "Average client improvement", prefix: '', suffix: '%', duration: 1.5 }
@@ -83,63 +83,62 @@ const CredibilitySection = () => {
           </p>
         </div>
         {/* Metrics */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-16">
-          {metrics.map((metric, i) => (
-            <Card key={i} className="bg-white border border-gray-100 rounded-xl shadow-sm p-7 flex flex-col items-center animate-fade-in transition-all duration-300 hover:shadow-xl hover:ring-2 hover:ring-electric-blue/20">
-              <span className="text-5xl sm:text-6xl font-extrabold text-electric-blue mb-3 font-mono tabular-nums">
-                <CountUp end={metric.number} duration={metric.duration} prefix={metric.prefix} suffix={metric.suffix} />
-              </span>
-              <span className="text-lg font-bold text-navy mb-1 text-center">{metric.label}</span>
-              <span className="text-base text-gray-500 text-center">{metric.description}</span>
-            </Card>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+          {metrics.map((metric, i) => {
+            // Minimal tech icons for each metric
+            const icons = [
+              <svg key="icon0" className="w-7 h-7 text-success-green mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>, // check
+              <svg key="icon1" className="w-7 h-7 text-electric-blue mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>, // clock
+              <svg key="icon2" className="w-7 h-7 text-navy mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 6-6"/></svg>, // flow/arrow
+              <svg key="icon3" className="w-7 h-7 text-warning-amber mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 19V5m0 0l-7 7m7-7l7 7"/></svg>
+            ];
+            return (
+              <Card key={i} className="bg-white border border-gray-100 rounded-xl shadow-md p-8 flex flex-col items-center animate-fade-in transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                {icons[i]}
+                <span className="text-6xl md:text-7xl font-extrabold text-electric-blue mb-2 font-mono tabular-nums">
+                  {typeof metric.number === 'string' ? metric.number : <CountUp end={metric.number} duration={metric.duration} prefix={metric.prefix} suffix={metric.suffix} />}
+                </span>
+                <span className="text-base font-bold text-navy mb-0.5 text-center tracking-tight opacity-90">{metric.label}</span>
+                <span className="text-sm text-[#718096] text-center opacity-80 mt-0.5">{metric.description}</span>
+              </Card>
+            );
+          })}
         </div>
         {/* Logo grid (Production Track Record) */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-navy text-center mb-12">
             Gilles' Production Track Record:
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center gap-3 mb-4">
-                    {project.logo}
-                    <h4 className="text-xl font-bold text-navy group-hover:text-electric-blue transition-colors mt-2">
-                      {project.name}
-                    </h4>
-                  </div>
-                  <p className="text-warm-gray leading-relaxed text-center">
-                    {project.description}
-                  </p>
-                </CardContent>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-20">
+            {projects.map((project, i) => (
+              <Card key={i} className="bg-white border border-gray-100 rounded-xl shadow-md p-6 flex flex-col items-center animate-fade-in transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div className="mb-3 grayscale hover:grayscale-0 transition-all duration-300">
+                  {project.logo}
+                </div>
+                <span className="font-semibold text-navy mb-1 text-lg text-center">{project.name}</span>
+                <span className="text-warm-gray text-sm mb-2 text-center">{project.description.split('.')[0]}</span>
+                <span className="text-gray-500 text-xs text-center">{project.description.split('.').slice(1).join('.')}</span>
               </Card>
             ))}
           </div>
         </div>
         {/* Client Testimonial */}
-        <div className="flex justify-center">
-          <div className="max-w-2xl mx-auto">
-            <Card className="bg-white border border-gray-100 rounded-2xl shadow-lg p-10 animate-fade-in transition-all duration-300 hover:shadow-2xl hover:ring-2 hover:ring-electric-blue/20">
-              <CardContent className="flex flex-col items-center">
-                <p className="text-2xl text-charcoal mb-7 text-center font-semibold leading-relaxed">
-                  "Gilles architected our orchestration system from scratch. We scaled from 0 to 50M+ executions/month with zero critical failures. His blueprints are now our gold standard."
-                </p>
-                <div className="flex items-center gap-4 mt-2">
-                  <img src="/lovable-uploads/zenaton-avatar.png" alt="Zenaton CTO" className="w-14 h-14 rounded-full border-2 border-electric-blue shadow" />
-                  <div>
-                    <div className="font-bold text-navy text-lg">Jules, CTO @ Zenaton</div>
-                    <div className="text-base text-gray-500">Workflow SaaS, Paris</div>
-                  </div>
+        <div className="flex justify-center my-20">
+          <div className="max-w-2xl mx-auto w-full">
+            <div className="relative bg-[#f7fafc] rounded-xl shadow-md p-8 md:p-10 animate-fade-in flex flex-col items-center">
+              {/* Large faint quote accent */}
+              <span className="absolute left-6 top-2 text-7xl md:text-8xl font-serif text-electric-blue opacity-10 select-none pointer-events-none">“</span>
+              <p className="italic text-2xl md:text-3xl text-charcoal mb-7 text-center leading-relaxed z-10">
+                Gilles architected our orchestration system from scratch. We scaled from 0 to 50M+ executions/month with zero critical failures. His blueprints are now our gold standard.
+              </p>
+              <div className="flex items-center gap-4 mt-2 z-10">
+                <img src="/lovable-uploads/zenaton-avatar.png" alt="Zenaton CTO" className="w-14 h-14 rounded-full border-2 border-electric-blue shadow" />
+                <div>
+                  <div className="font-bold text-navy text-lg">Jules, CTO @ Zenaton</div>
+                  <div className="text-sm text-[#718096]">Workflow SaaS, Paris</div>
                 </div>
-              </CardContent>
-            </Card>
-            <blockquote className="text-xl text-charcoal mb-4 italic">
-              "Gilles' architecture review saved us 6 months of debugging hell. Our payment failures dropped 90% in the first month."
-            </blockquote>
-            <cite className="text-electric-blue font-semibold">
-              — CTO, Series B Fintech (40M+ transactions/month)
-            </cite>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-12 text-center">

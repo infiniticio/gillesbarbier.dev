@@ -38,7 +38,7 @@ const HeroSection = () => {
                     loading="eager"
                   />
                 </div>
-                {/* Availability badge - now top right */}
+                {/* Availability badge - always visible */}
                 <div className="absolute -top-4 -right-4 bg-white px-5 py-2.5 rounded-full shadow-xl border border-warm-gray-100 flex items-center gap-3 z-10">
                   <div className="w-4 h-4 bg-success-green rounded-full border-2 border-white shadow animate-pulse flex-shrink-0"></div>
                   <div>
@@ -84,17 +84,7 @@ const HeroSection = () => {
             
 
             
-            {/* Mobile-only status badge */}
-            <div className="lg:hidden mt-8">
-              <div className="inline-flex items-center gap-3 px-5 py-3 bg-bg-light rounded-xl border border-warm-gray-200 shadow-sm w-full">
-                <div className="w-3 h-3 bg-success-green rounded-full animate-pulse flex-shrink-0"></div>
-                <div>
-                  <p className="text-sm font-medium text-charcoal">
-                    <span className="font-semibold">Next availability:</span> September 2025 (2 spots)
-                  </p>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

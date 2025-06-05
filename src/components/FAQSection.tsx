@@ -47,7 +47,7 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-100 last:border-b-0">
               <AccordionTrigger
-                className="flex items-center w-full justify-between px-4 sm:px-8 py-6 rounded-xl text-lg font-bold text-navy bg-white hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-electric-blue transition-all cursor-pointer shadow-sm"
+                className="flex items-center w-full justify-between px-4 sm:px-8 py-6 rounded-xl text-lg font-bold text-navy bg-white hover:bg-blue-100 focus:outline-none focus:ring-1 focus:ring-blue-200 focus:shadow-lg transition-all cursor-pointer shadow-sm"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="flex-1 text-left">
