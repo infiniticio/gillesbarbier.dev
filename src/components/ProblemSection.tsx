@@ -19,7 +19,10 @@ const ProblemSection = () => {
       <div className="absolute top-0 left-0 right-0 h-1" style={{ backgroundImage: `url("${circuitPattern}")`, backgroundSize: '60px 20px' }}></div>
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">Your Architecture Is Scaling. Your Reliability Isn't.</h2>
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">
+  <span className="block">Your Architecture Is Scaling.</span>
+  <span className="block">Your Reliability Isn't.</span>
+</h2>
           <p className="text-xl text-charcoal leading-relaxed max-w-3xl mx-auto">
             Modern tech stacks grow fast—complexity grows faster. What started as a clean microservices 
             architecture becomes a tangled web of dependencies, race conditions, and mysterious failures.

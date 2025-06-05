@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="pt-8 mt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-gray-400 text-sm">
-                <p>&copy; 2024 Gilles Barbier. All rights reserved.</p>
+                <p>&copy; 2025 Gilles Barbier. All rights reserved.</p>
               </div>
               <div className="flex items-center gap-2 group cursor-pointer transition-all duration-200">
                 <div className="w-2 h-2 bg-success-green rounded-full animate-pulse"></div>
