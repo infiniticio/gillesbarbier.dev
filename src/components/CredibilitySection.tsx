@@ -79,15 +79,15 @@ const CredibilitySection = () => {
           </p>
         </div>
         {/* Metrics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {metrics.map((metric, index) => (
-            <div key={index} className="text-center animate-scale-in">
-              <div className="font-mono text-4xl sm:text-5xl font-bold text-electric-blue mb-2">
-                <CountUp end={metric.number} duration={metric.duration} suffix={metric.suffix} />
-              </div>
-              <div className="font-semibold text-navy mb-1">{metric.label}</div>
-              <div className="text-sm text-warm-gray">{metric.description}</div>
-            </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-16">
+          {metrics.map((metric, i) => (
+            <Card key={i} className="bg-white border border-gray-100 rounded-xl shadow-sm p-7 flex flex-col items-center animate-fade-in transition-all duration-300 hover:shadow-xl hover:ring-2 hover:ring-electric-blue/20">
+              <span className="text-5xl sm:text-6xl font-extrabold text-electric-blue mb-3 font-mono tabular-nums">
+                <CountUp end={metric.number} duration={metric.duration} prefix={metric.prefix} suffix={metric.suffix} />
+              </span>
+              <span className="text-lg font-bold text-navy mb-1 text-center">{metric.label}</span>
+              <span className="text-base text-gray-500 text-center">{metric.description}</span>
+            </Card>
           ))}
         </div>
         {/* Logo grid (Production Track Record) */}
@@ -115,8 +115,21 @@ const CredibilitySection = () => {
         </div>
         {/* Client Testimonial */}
         <div className="flex justify-center">
-          <div className="bg-gradient-to-r from-warm-gray-50 to-white rounded-2xl p-8 md:p-10 max-w-2xl w-full flex flex-col items-center shadow-md border border-warm-gray-100">
-            <img src="/avatar-gilles.jpg" alt="Gilles Barbier" className="w-16 h-16 rounded-full mb-4 border-2 border-electric-blue/30 shadow" />
+          <div className="max-w-2xl mx-auto">
+            <Card className="bg-white border border-gray-100 rounded-2xl shadow-lg p-10 animate-fade-in transition-all duration-300 hover:shadow-2xl hover:ring-2 hover:ring-electric-blue/20">
+              <CardContent className="flex flex-col items-center">
+                <p className="text-2xl text-charcoal mb-7 text-center font-semibold leading-relaxed">
+                  "Gilles architected our orchestration system from scratch. We scaled from 0 to 50M+ executions/month with zero critical failures. His blueprints are now our gold standard."
+                </p>
+                <div className="flex items-center gap-4 mt-2">
+                  <img src="/lovable-uploads/zenaton-avatar.png" alt="Zenaton CTO" className="w-14 h-14 rounded-full border-2 border-electric-blue shadow" />
+                  <div>
+                    <div className="font-bold text-navy text-lg">Jules, CTO @ Zenaton</div>
+                    <div className="text-base text-gray-500">Workflow SaaS, Paris</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             <blockquote className="text-xl text-charcoal mb-4 italic">
               "Gilles' architecture review saved us 6 months of debugging hell. Our payment failures dropped 90% in the first month."
             </blockquote>

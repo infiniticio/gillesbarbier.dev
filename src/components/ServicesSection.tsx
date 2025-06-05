@@ -52,13 +52,13 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">
             How Gilles Designs Orchestration Systems That Scale Under Pressure
           </h2>
-          <p className="text-xl text-warm-gray max-w-3xl mx-auto">
+          <p className="text-xl text-charcoal max-w-3xl mx-auto">
             I don't just apply patterns—I architect solutions that have survived real-world production stress. 
             From payment processing at fintech scale to ML pipelines handling terabytes daily.
           </p>
@@ -70,30 +70,30 @@ const ServicesSection = () => {
             <div className="h-full w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent left-1/2 absolute"></div>
             <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent top-1/2 absolute"></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-12 relative z-10">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group relative bg-white border border-gray-100 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.05] hover:border-electric-blue/30"
+                className="group relative bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-lg overflow-hidden transition-all duration-300 hover:scale-[1.05] hover:border-electric-blue/30 animate-fade-in"
               >
                 {/* Hover effect background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white to-electric-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-electric-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span>{service.icon}</span>
+                  <div className="flex items-center gap-5 mb-5">
+                    <span className="flex-shrink-0">{service.icon}</span>
                     <div>
-                      <CardTitle className="text-xl text-navy group-hover:text-electric-blue transition-colors">
+                      <CardTitle className="text-xl sm:text-2xl font-bold text-navy group-hover:text-electric-blue transition-colors mb-1">
                         {service.title}
                       </CardTitle>
-                      <div className="flex gap-2 items-center mt-1">
+                      <div className="flex gap-3 items-center mt-1">
                         <span className="font-mono text-electric-blue text-lg font-bold">{service.price}</span>
-                        <span className="font-mono text-gray-500 text-sm">{service.timeframe}</span>
+                        <span className="font-mono text-gray-500 text-base">{service.timeframe}</span>
                       </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-warm-gray mb-6 leading-relaxed">
+                  <p className="text-charcoal mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
@@ -110,20 +110,20 @@ const ServicesSection = () => {
           </div>
         </div>
 
-                  {/* Investment Guarantee Badge */}
-                  <div className="flex justify-center mt-6">
-            <div className="inline-flex items-start gap-3 bg-warm-gray-50/80 px-5 py-4 rounded-xl border border-warm-gray-100">
-              <div className="bg-success-green/10 p-1.5 rounded-lg mt-0.5">
-                <svg className="w-5 h-5 text-success-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <p className="font-medium text-charcoal">Investment Guarantee</p>
-                <p className="text-warm-gray-600 text-sm mt-1">If my architecture audit doesn't identify improvements worth 10x the cost, you get a full refund.</p>
-              </div>
+        {/* Investment Guarantee Badge */}
+        <div className="flex justify-center mt-6">
+          <div className="inline-flex items-start gap-3 bg-warm-gray-50/80 px-5 py-4 rounded-xl border border-warm-gray-100">
+            <div className="bg-success-green/10 p-1.5 rounded-lg mt-0.5">
+              <svg className="w-5 h-5 text-success-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <p className="font-medium text-charcoal">Investment Guarantee</p>
+              <p className="text-warm-gray-600 text-sm mt-1">If my architecture audit doesn't identify improvements worth 10x the cost, you get a full refund.</p>
             </div>
           </div>
+        </div>
       </div>
     </section>
   );

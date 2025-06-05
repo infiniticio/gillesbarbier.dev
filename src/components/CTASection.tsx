@@ -4,13 +4,14 @@ import { Calendar } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-navy via-navy to-electric-blue/10 relative">
+    <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-navy via-electric-blue/30 to-navy/90 relative overflow-hidden">
+      {/* Subtle circuit pattern overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{backgroundImage: `url('data:image/svg+xml,%3Csvg width=\'60\' height=\'20\' viewBox=\'0 0 60 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 10h60v1H0z\' fill=\'%23e2e8f0\' fill-opacity=\'0.5\'/%3E%3Cpath d=\'M15 5l5-5 5 5-5 5zM15 15l5 5 5-5M35 0l5 5-5 5-5-5zM35 20l5-5 5 5-5 5z\' fill=\'%233b82f6\' fill-opacity=\'0.09\'/%3E%3C/svg%3E')`, backgroundSize: '60px 20px'}} />
       <div className="max-w-4xl mx-auto text-center animate-fade-in relative z-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-8">
           Get Your Architecture Assessment
         </h2>
-        
-        <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+        <p className="text-xl text-blue-100 mb-10 leading-relaxed">
           30-minute Architecture Assessment with Gilles to diagnose your specific scaling bottlenecks. 
           I'll identify your 3 biggest workflow risks and the exact fixes needed—completely free.
         </p>
@@ -56,12 +57,13 @@ const CTASection = () => {
         <div className="flex flex-col items-center gap-2 mb-4">
           <Button 
             size="lg"
-            className="bg-electric-blue hover:bg-blue-600 text-white px-12 py-7 text-xl font-extrabold rounded-xl shadow-2xl hover:shadow-electric-blue/30 transition-all duration-300 hover:scale-105 flex items-center gap-3"
+            className="bg-electric-blue hover:bg-blue-700 text-white px-12 py-7 text-xl font-extrabold rounded-xl shadow-xl hover:shadow-electric-blue/30 transition-all duration-300 hover:scale-105 flex items-center gap-3 group"
           >
             <Calendar className="w-7 h-7 mr-2" />
             Book Your Free Architecture Assessment
+            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
           </Button>
-          <p className="text-blue-100 text-xs sm:text-sm mt-2 max-w-xl mx-auto font-medium">
+          <p className="text-blue-100 text-xs sm:text-sm mt-2 max-w-xl mx-auto font-medium italic opacity-80">
             Zero obligation. I'll give you actionable insights regardless of whether we work together. 
             If I can't help, I'll refer you to someone who can.
           </p>
