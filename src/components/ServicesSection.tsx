@@ -56,7 +56,7 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">
-            How Gilles Designs Orchestration Systems That Scale Under Pressure
+            I Design Systems That Scale Under Pressure
           </h2>
           <p className="text-xl text-charcoal max-w-3xl mx-auto">
             I don't just apply patterns—I architect solutions that have survived real-world production stress. 
