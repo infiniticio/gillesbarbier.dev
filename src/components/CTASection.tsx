@@ -55,11 +55,12 @@ const CTASection = () => {
               href="https://calendar.app.google/FGD1SzqN2Tp1SUdu6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex bg-blue-700 hover:bg-blue-800 text-white px-12 py-7 text-2xl font-extrabold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center gap-3 group"
+              className="block mx-auto bg-gradient-to-r from-electric-blue to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-5 text-2xl font-extrabold rounded-full shadow-xl focus-visible:ring-4 focus-visible:ring-blue-300 transition-all duration-300 text-center flex items-center justify-center gap-3 leading-tight"
             >
-              <Calendar className="w-7 h-7 mr-2" />
-              Book Your Free Assessment
-              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
+              <Calendar className="w-6 h-6 mr-2 flex-shrink-0" />
+              <span className="flex-1 block sm:hidden">Book Free Assessment</span>
+                <span className="flex-1 hidden sm:block">Book Your Free Architecture Assessment</span>
+              <span className="ml-2 text-3xl">→</span>
             </a>
             <p className="flex items-center text-blue-900 text-xs sm:text-sm mt-3 max-w-xl mx-auto font-medium opacity-80 gap-2 text-center">
               <Info className="w-4 h-4 flex-shrink-0 text-blue-400" />
@@ -74,10 +75,11 @@ const CTASection = () => {
           href="https://calendar.app.google/FGD1SzqN2Tp1SUdu6"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full max-w-md bg-electric-blue hover:bg-blue-600 text-white px-8 py-5 text-lg font-bold rounded-xl shadow-xl flex items-center justify-center gap-2 transition-all duration-300"
+          className="block max-w-xs mx-auto bg-gradient-to-r from-electric-blue to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-4 text-xl font-extrabold rounded-full shadow-xl focus-visible:ring-4 focus-visible:ring-blue-300 transition-all duration-300 text-center flex items-center justify-center gap-2 leading-tight"
         >
-          <Calendar className="w-6 h-6" />
-          Book Free Assessment
+          <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
+          <span className="flex-1">Book Free Assessment</span>
+          <span className="ml-2 text-2xl">→</span>
         </a>
       </div>
     </section>
