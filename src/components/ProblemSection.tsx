@@ -1,4 +1,4 @@
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, AlertCircle, Zap, AlertOctagon, AlertOctagonIcon, AlertTriangleIcon } from "lucide-react";
 
 const ProblemSection = () => {
   const painPoints = [
@@ -9,8 +9,13 @@ const ProblemSection = () => {
     "Business processes scattered across codebases, impossible to understand or modify"
   ];
 
+  // Custom SVG for the divider
+  const circuitPattern = `data:image/svg+xml,%3Csvg width='60' height='20' viewBox='0 0 60 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10h60v1H0z' fill='%23e2e8f0' fill-opacity='0.5'/%3E%3Cpath d='M15 5l5-5 5 5-5 5zM15 15l5 5 5-5M35 0l5 5-5 5-5-5zM35 20l5-5 5 5-5 5z' fill='%233b82f6' fill-opacity='0.2'/%3E%3C/svg%3E`;
+
   return (
-    <section className="py-8 px-4 sm:px-6 lg:px-8 bg-bg-light">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f7fafc] relative overflow-hidden">
+      {/* Circuit pattern divider at the top */}
+      <div className="absolute top-0 left-0 right-0 h-1" style={{ backgroundImage: `url("${circuitPattern}")`, backgroundSize: '60px 20px' }}></div>
       <div className="max-w-4xl mx-auto animate-fade-in">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">
@@ -28,27 +33,66 @@ const ProblemSection = () => {
           </h3>
           
           <div className="space-y-6">
-            {painPoints.map((point, index) => (
-              <div key={index} className="flex items-start gap-4 group">
-                <div className="flex-shrink-0 mt-1">
-                  <AlertTriangle className="w-5 h-5 text-amber-500" />
+            {painPoints.map((point, index) => {
+              // Extract the first two words for highlighting
+              const words = point.split(' ');
+              const firstTwo = words.slice(0, 2).join(' ');
+              const rest = words.slice(2).join(' ');
+              
+              // Different icons for visual variety
+              const icons = [
+                <AlertTriangle className="w-5 h-5 text-amber-500" />,
+                <AlertCircle className="w-5 h-5 text-red-500" />,
+                <Zap className="w-5 h-5 text-amber-400" />,
+                <AlertOctagon className="w-5 h-5 text-red-400" />,
+                <AlertTriangleIcon className="w-5 h-5 text-amber-600" />
+              ];
+              
+              // Keywords to highlight
+              const highlightKeywords = ['Revenue-critical', 'Engineering velocity', 'Customer trust', 'Debugging', 'Business processes'];
+              
+              // Process text to highlight keywords
+              const processedText = rest.split(/(\w+)/).map((word, i) => {
+                const keyword = highlightKeywords.find(k => word.includes(k));
+                if (keyword) {
+                  return <span key={i} className="font-semibold text-navy">{keyword} </span>;
+                }
+                return word + ' ';
+              });
+              
+              return (
+                <div key={index} className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 mt-1 p-1 bg-amber-50 rounded-full">
+                    {icons[index % icons.length]}
+                  </div>
+                  <p className="text-charcoal leading-relaxed">
+                    <span className="font-semibold text-navy">{firstTwo}</span>{' '}
+                    {processedText}
+                  </p>
                 </div>
-                <p className="text-charcoal leading-relaxed group-hover:text-navy transition-colors">
-                  <strong className="text-navy">{point.split(' ')[0]} {point.split(' ')[1]}</strong>{' '}
-                  {point.split(' ').slice(2).join(' ')}
+              );
+            })}
+          </div>
+          <div className="mt-10 p-6 bg-gradient-to-r from-amber-50 to-white rounded-xl border border-amber-100 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 p-2 bg-amber-100 rounded-full">
+                <AlertTriangle className="w-5 h-5 text-amber-600" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-charcoal mb-1">The real cost of ignoring these issues?</h4>
+                <p className="text-charcoal">
+                  Every day of <span className="font-semibold text-amber-700">architectural debt compounds</span>. 
+                  What takes <span className="font-semibold">2 weeks to fix today</span> will take 
+                  <span className="font-semibold"> 2 months next year</span>.
                 </p>
               </div>
-            ))}
-          </div>
-          
-          <div className="mt-8 p-6 bg-amber-50 rounded-lg border border-amber-200">
-            <p className="text-charcoal font-semibold">
-              <span className="text-amber-600">The real cost?</span> Every day of architectural debt compounds. 
-              What takes 2 weeks to fix today will take 2 months next year.
-            </p>
+            </div>
           </div>
         </div>
       </div>
+      
+      {/* Circuit pattern divider at the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 rotate-180" style={{ backgroundImage: `url("${circuitPattern}")`, backgroundSize: '60px 20px' }}></div>
     </section>
   );
 };
