@@ -50,29 +50,35 @@ const CTASection = () => {
               </div>
             </li>
           </ul>
-          <Button 
-            size="lg"
-            className="bg-blue-700 hover:bg-blue-800 text-white px-12 py-7 text-2xl font-extrabold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-3 group mb-3 mt-16"
-          >
-            <Calendar className="w-7 h-7 mr-2" />
-            Book Your Free Architecture Assessment
-            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
-          </Button>
-          <p className="flex items-center text-blue-900 text-xs sm:text-sm mt-2 max-w-xl mx-auto font-medium opacity-80 gap-2">
-            <Info className="w-4 h-4 flex-shrink-0 text-blue-400" />
-            Zero obligation. I'll give you actionable insights regardless of whether we work together. If I can't help, I'll refer you to someone who can.
-          </p>
+          <div className="flex flex-col items-center justify-center mt-12 mb-2">
+            <a
+              href="https://calendar.app.google/FGD1SzqN2Tp1SUdu6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex bg-blue-700 hover:bg-blue-800 text-white px-12 py-7 text-2xl font-extrabold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center gap-3 group"
+            >
+              <Calendar className="w-7 h-7 mr-2" />
+              Book Your Free Assessment
+              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
+            </a>
+            <p className="flex items-center text-blue-900 text-xs sm:text-sm mt-3 max-w-xl mx-auto font-medium opacity-80 gap-2 text-center">
+              <Info className="w-4 h-4 flex-shrink-0 text-blue-400" />
+              Zero obligation. I'll give you actionable insights regardless of whether we work together. If I can't help, I'll refer you to someone who can.
+            </p>
+          </div>
         </div>
       </div>
       {/* Sticky CTA for mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden flex justify-center bg-gradient-to-t from-navy/95 via-navy/80 to-transparent py-3 px-4">
-        <Button 
-          size="lg"
-          className="w-full max-w-md bg-electric-blue hover:bg-blue-600 text-white px-8 py-5 text-lg font-bold rounded-xl shadow-xl flex items-center justify-center gap-2"
+        <a
+          href="https://calendar.app.google/FGD1SzqN2Tp1SUdu6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full max-w-md bg-electric-blue hover:bg-blue-600 text-white px-8 py-5 text-lg font-bold rounded-xl shadow-xl flex items-center justify-center gap-2 transition-all duration-300"
         >
           <Calendar className="w-6 h-6" />
           Book Free Assessment
-        </Button>
+        </a>
       </div>
     </section>
   );

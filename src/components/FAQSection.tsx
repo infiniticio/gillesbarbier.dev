@@ -31,23 +31,23 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#f7fafc] rounded-3xl max-w-5xl mx-auto mt-24 mb-12 shadow-lg animate-fade-in">
+    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#f4f8fc] rounded-3xl max-w-5xl mx-auto mt-24 mb-12 shadow-lg animate-fade-in">
       <div className="text-center mb-12">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">Frequently Asked Questions</h2>
         <p className="text-xl text-warm-gray">
           Common questions from CTOs and VPs Engineering
         </p>
       </div>
-      <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div className="bg-[#f8fbff] border border-blue-100 rounded-3xl shadow-2xl overflow-hidden">
         <Accordion
           type="single"
           collapsible
-          className="space-y-6"
+          className="space-y-4"
         >
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-100 last:border-b-0">
+            <AccordionItem key={index} value={`item-${index}`} className="border-b border-blue-50 last:border-b-0">
               <AccordionTrigger
-                className="flex items-center w-full justify-between px-4 sm:px-8 py-6 rounded-xl text-lg font-bold text-navy bg-white hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-electric-blue transition-all cursor-pointer shadow-sm"
+                className={`flex items-center w-full justify-between px-4 sm:px-8 py-7 rounded-xl text-xl font-bold text-navy bg-white hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-sky-300 transition-all cursor-pointer shadow-sm ${openIndex === index ? 'bg-blue-50' : ''}`}
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="flex-1 text-left">
@@ -55,14 +55,14 @@ const FAQSection = () => {
                 </span>
                 <span className="ml-auto flex-shrink-0 transition-transform duration-300">
                   {openIndex === index ? (
-                    <Minus className="w-6 h-6 text-electric-blue" />
+                    <Minus className="w-7 h-7 text-sky-500" />
                   ) : (
-                    <Plus className="w-6 h-6 text-warm-gray-400" />
+                    <Plus className="w-7 h-7 text-gray-300" />
                   )}
                 </span>
               </AccordionTrigger>
               <AccordionContent
-                className="px-4 sm:px-8 pb-7 pt-1 text-charcoal-600 text-lg leading-relaxed transition-all duration-400 ease-in-out animate-fade-in"
+                className="px-4 sm:px-8 pb-7 pt-1 text-gray-800 text-lg leading-relaxed border-l-4 border-blue-100 pl-6 transition-all duration-400 ease-in-out animate-fade-in"
                 style={{
                   transition: 'max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s',
                 }}

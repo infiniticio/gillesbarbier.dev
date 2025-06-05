@@ -58,7 +58,7 @@ const HeroSection = () => {
             
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Turn Your Failing Microservices Into
+              Turn Your Failing Microservices Into&nbsp;
               <br className="block sm:hidden" />
               <span className="text-gradient">Reliable Revenue Engines</span>
             </h1>
@@ -72,13 +72,20 @@ const HeroSection = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button 
-                onClick={handleCTAClick}
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="btn-primary group px-8 py-6 text-lg font-semibold shadow-md hover:shadow-xl hover:bg-electric-blue/90 transition-all duration-200"
               >
-                <span className="mr-3">Book a 30-min Architecture Assessment</span>
-                <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                <a
+                  href="https://calendar.app.google/FGD1SzqN2Tp1SUdu6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <span className="mr-3">Book Your Free Architecture Assessment</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                </a>
               </Button>
             </div>
             

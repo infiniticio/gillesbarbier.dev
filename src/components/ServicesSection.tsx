@@ -18,16 +18,16 @@ const ScaleIcon = () => (
 const ServicesSection = () => {
   const services = [
     {
-      title: "2-Week Architecture Deep Dive",
-      price: "€8,000+",
-      timeframe: "2 weeks",
+      title: "1-Week Architecture Deep Dive",
+      price: "€5,000+",
+      timeframe: "1 week",
       description: "Complete system audit with prioritized action plan and ROI projections. Clients typically see actionable improvements worth 10x the investment within 30 days.",
       icon: <AuditIcon />,
       features: ["System audit", "Prioritized action plan", "ROI projections", "30-day implementation timeline"]
     },
     {
       title: "4-Week Migration Blueprint",
-      price: "€16,000+",
+      price: "€18,000+",
       timeframe: "4 weeks",
       description: "Step-by-step transition plan from your current setup to bulletproof orchestration. No big-bang rewrites—just smart, incremental improvements.",
       icon: <MigrationIcon />,
@@ -35,7 +35,7 @@ const ServicesSection = () => {
     },
     {
       title: "Implementation Partnership",
-      price: "€1,000/day",
+      price: "€1,200/day",
       timeframe: "Custom",
       description: "Hands-on design and development of your most critical workflows. I build it right the first time, with observability and resilience baked in.",
       icon: <BuildIcon />,
@@ -43,7 +43,7 @@ const ServicesSection = () => {
     },
     {
       title: "Scale-Up Preparation",
-      price: "€12,000+",
+      price: "€14,000+",
       timeframe: "3-4 weeks",
       description: "Architecture review before major hiring phases. Ensure your foundations can handle 10x growth without breaking.",
       icon: <ScaleIcon />,
