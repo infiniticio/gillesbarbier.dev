@@ -65,7 +65,7 @@ const HeroSection = () => {
             
             {/* Subheadline */}
             <p className="text-base sm:text-xl text-[#333b4f] leading-relaxed max-w-2xl mb-6 mx-auto lg:mx-0">
-              I'm <strong className="text-charcoal font-semibold">Gilles Barbier</strong>. I've built 3 production workflow engines processing
+              I'm <strong className="text-charcoal font-semibold">Gilles Barbier</strong>. I've built 3 production workflow engines processing&nbsp;
               <span className="font-mono font-semibold text-electric-blue">50M+ executions monthly</span>.
               Now I help scale-ups design orchestration systems that actually scale—without the chaos.
             </p>
