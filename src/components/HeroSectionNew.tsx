@@ -32,7 +32,7 @@ const HeroSection = () => {
                   }}
                 >
                   <img 
-                    src="/lovable-uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
+                    src="/uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
                     alt="Gilles Barbier - Workflow Orchestration Expert"
                     className="w-full h-full object-cover animate-scale-in"
                     loading="eager"

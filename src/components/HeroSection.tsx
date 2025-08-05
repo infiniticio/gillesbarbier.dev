@@ -76,7 +76,7 @@ const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-electric-blue/20 to-transparent rounded-3xl -rotate-3 -z-10"></div>
               <div className="relative overflow-hidden rounded-2xl shadow-2xl border-8 border-white">
                 <img 
-                  src="/lovable-uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
+                  src="/uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
                   alt="Gilles Barbier - Workflow Orchestration Expert"
                   className="w-full h-auto object-cover animate-scale-in"
                   loading="eager"

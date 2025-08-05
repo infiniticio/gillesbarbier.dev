@@ -51,17 +51,17 @@ const CredibilitySection = () => {
     {
       name: "Zenaton",
       description: "Workflow-as-code SaaS processing 50M+ executions monthly across 500+ companies. Survived Black Friday traffic spikes and financial trading workloads.",
-      logo: <img src="/lovable-uploads/zenaton-logo.png" alt="Zenaton Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
+      logo: <img src="/uploads/zenaton-logo.png" alt="Zenaton Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     },
     {
       name: "Infinitic", 
       description: "Distributed orchestration engine on Apache Pulsar. 99.9% uptime handling critical financial transactions and real-time data processing.",
-      logo: <img src="/lovable-uploads/infinitic-logo.png" alt="Infinitic Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
+      logo: <img src="/uploads/infinitic-logo.png" alt="Infinitic Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     },
     {
       name: "Lemline",
       description: "CNCF-compliant Serverless Workflow runtime (open source). Built for cloud-native environments from day one.",
-      logo: <img src="/lovable-uploads/lemline-logo.png" alt="Lemline Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
+      logo: <img src="/uploads/lemline-logo.png" alt="Lemline Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     }
   ];
 
@@ -124,7 +124,7 @@ const CredibilitySection = () => {
                 Gilles architected our orchestration system from scratch. We scaled from 0 to 50M+ executions/month with zero critical failures. His blueprints are now our gold standard.
               </p>
               <div className="flex items-center gap-4 mt-2 z-10">
-                <img src="/lovable-uploads/splio-lead-engineer.png" alt="Lead Engineer, Splio" className="w-14 h-14 rounded-full border-2 border-electric-blue shadow" />
+                <img src="/uploads/splio-lead-engineer.png" alt="Lead Engineer, Splio" className="w-14 h-14 rounded-full border-2 border-electric-blue shadow" />
                 <div>
                   <div className="font-bold text-navy text-lg">Matthieu, Lead Engineer</div>
                   <div className="text-sm text-[#718096]">Splio, Paris</div>
