@@ -40,7 +40,7 @@ const LemlineLogo = () => (
 const CredibilitySection = () => {
   // Animated metrics config
   const metrics = [
-    { number: '5M', label: "Executions Monthly", description: "Across 500+ companies", prefix: '', suffix: '', duration: 0 },
+    { number: '50M', label: "Executions Monthly", description: "Across 50+ companies", prefix: '', suffix: '', duration: 0 },
     { number: 99.9, label: "Uptime Achieved", description: "In production systems", prefix: '', suffix: '%', duration: 2 },
     { number: 3, label: "Workflow Engines Built", description: "From scratch to scale", prefix: '', suffix: '', duration: 1.5 },
     { number: 90, label: "Failure Reduction", description: "Average client improvement", prefix: '', suffix: '%', duration: 1.5 }
@@ -50,12 +50,12 @@ const CredibilitySection = () => {
   const projects = [
     {
       name: "Zenaton",
-      description: "Workflow-as-code SaaS processing 50M+ executions monthly across 500+ companies. Survived Black Friday traffic spikes and financial trading workloads.",
+      description: "Workflow-as-code SaaS processing 50M+ executions monthly across 50+ companies. Survived Black Friday traffic spikes and financial trading workloads.",
       logo: <img src="/uploads/zenaton-logo.png" alt="Zenaton Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     },
     {
       name: "Infinitic", 
-      description: "Distributed orchestration engine on Apache Pulsar. 99.9% uptime handling critical financial transactions and real-time data processing.",
+      description: "Distributed orchestration engine on Apache Pulsar. 99.9% uptime handling critical financial transactions and marketing operations.",
       logo: <img src="/uploads/infinitic-logo.png" alt="Infinitic Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     },
     {

@@ -2,7 +2,6 @@ const Footer = () => {
   return (
     <footer className="py-16 px-4 sm:px-8 lg:px-14 bg-charcoal animate-fade-in">
       {/* Top divider: gradient line */}
-      <div className="h-1 w-full bg-gradient-to-r from-transparent via-electric-blue/40 to-transparent mb-10 opacity-80" />
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
