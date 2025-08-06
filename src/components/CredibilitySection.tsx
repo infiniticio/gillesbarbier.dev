@@ -50,12 +50,12 @@ const CredibilitySection = () => {
   const projects = [
     {
       name: "Zenaton",
-      description: "Workflow-as-code SaaS processing 50M+ executions monthly across 100+ companies. Survived Black Friday traffic spikes and financial trading workloads.",
+      description: "Workflow-as-code SaaS processing 10M+ executions monthly across 100+ companies. Survived Black Friday traffic spikes.",
       logo: <img src="/uploads/zenaton-logo.png" alt="Zenaton Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     },
     {
       name: "Infinitic", 
-      description: "Distributed orchestration engine on Apache Pulsar. 99.9% uptime handling critical financial transactions and real-time data processing.",
+      description: "Distributed orchestration engine on Apache Pulsar (open source). 99.9% uptime handling critical financial transactions and marketing operations.",
       logo: <img src="/uploads/infinitic-logo.png" alt="Infinitic Logo" className="w-14 h-14 object-contain grayscale opacity-80" />
     },
     {
