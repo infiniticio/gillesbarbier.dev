@@ -1,94 +1,91 @@
-
 import { Button } from "@/components/ui/button";
-import { SectionDivider } from "./ui/SectionDivider";
 import { StickyCTA } from "./StickyCTA";
 
 const HeroSection = () => {
   const handleCTAClick = () => {
-    // TODO: Implement CTA click handler (e.g., open modal, navigate to contact)
     console.log('CTA button clicked');
   };
+
+  // Background pattern for the photo container
+  const gridPattern = `data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40h-40v-40z' fill='%233182ce' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E`;
 
   return (
     <section className="relative bg-white overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10" aria-hidden="true">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-br from-electric-blue/20 to-transparent rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[800px] bg-gradient-to-br from-electric-blue/20 to-transparent rounded-full filter blur-3xl"></div>
       </div>
-      
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center py-24 md:py-32">
-          {/* Content */}
-          <div className="space-y-8 animate-fade-in">
-            {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-bg-light rounded-full border border-warm-gray-200 shadow-sm">
-              <div className="w-2.5 h-2.5 bg-success-green rounded-full animate-pulse"></div>
-              <span className="text-sm text-warm-gray-700 font-mono tracking-tight">
-                Based in Paris • Remote-first • Next availability: September 2025 (2 spots remaining)
-              </span>
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
+          {/* Photo - Left Column */}
+          <div className="lg:order-1">
+            <div className="relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl mx-auto lg:mx-0 mb-10 lg:mb-0">
+              {/* Circular container with gradient border */}
+              <div className="relative rounded-full p-1 bg-gradient-to-br from-electric-blue/20 via-transparent to-electric-blue/10 shadow-2xl">
+                <div 
+                  className="relative overflow-hidden rounded-full border-8 border-white shadow-2xl aspect-square"
+                  style={{
+                    backgroundImage: `url("${gridPattern}")`,
+                    backgroundSize: '40px 40px'
+                  }}
+                >
+                  <img 
+                    src="/uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
+                    alt="Gilles Barbier - Workflow Orchestration Expert"
+                    className="w-full h-full object-cover animate-scale-in"
+                    loading="eager"
+                  />
+                </div>
+                {/* Availability badge - always visible */}
+                <div className="absolute -top-4 -right-4 bg-white px-3 sm:px-5 py-2 rounded-full shadow-xl border border-warm-gray-100 flex items-center gap-2 sm:gap-3 z-10 text-xs sm:text-sm">
+                  <div className="w-4 h-4 bg-success-green rounded-full border-2 border-white shadow animate-pulse flex-shrink-0"></div>
+                  <div>
+                    <span className="text-sm font-medium text-charcoal">
+                      <span className="font-semibold">Next availability:</span> September 2025 (2 spots remaining)
+                    </span>
+                    <p className="text-xs text-warm-gray-500 mt-0.5">Based in Paris • Remote-first</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          {/* Content - Right Column */}
+          <div className="lg:order-2 space-y-6 sm:space-y-8 animate-fade-in text-center lg:text-left">
+
             
             {/* Main Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-              Turn Your Failing Microservices Into{" "}
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
+              Turn Your Failing Microservices Into&nbsp;
+              <br className="block sm:hidden" />
               <span className="text-gradient">Reliable Revenue Engines</span>
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl text-warm-gray-600 leading-relaxed max-w-2xl">
-              I'm <strong className="text-charcoal font-semibold">Gilles Barbier</strong>. I've built 3 production workflow engines processing{" "}
-              <span className="font-mono font-semibold text-electric-blue">50M+ executions monthly</span>. 
+            <p className="text-base sm:text-xl text-[#333b4f] leading-relaxed max-w-2xl mb-6 mx-auto lg:mx-0">
+              I'm <strong className="text-charcoal font-semibold">Gilles Barbier</strong>. I've built 3 production workflow engines processing&nbsp;
+              <span className="font-mono font-semibold text-electric-blue">50M+ executions monthly</span>.
               Now I help scale-ups design orchestration systems that actually scale—without the chaos.
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button 
-                onClick={handleCTAClick}
-                size="lg" 
-                className="btn-primary group"
-              >
-                <span className="mr-2">Book a 30-min Architecture Assessment</span>
-                <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-              </Button>
-              
-              <Button 
-                variant="outline"
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center justify-center lg:justify-start">
+              <Button
+                asChild
                 size="lg"
-                className="border-warm-gray-300 text-warm-gray-700 hover:bg-warm-gray-50"
+                className="btn-primary group px-8 py-6 text-lg font-semibold shadow-md hover:shadow-xl hover:bg-electric-blue/90 transition-all duration-200"
               >
-                View Case Studies
+                <a
+                  href="https://calendar.app.google/FGD1SzqN2Tp1SUdu6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <span className="mr-3 block sm:hidden">Book Your Free Assessment</span>
+                  <span className="mr-3 hidden sm:block">Book Your Free Architecture Assessment</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                </a>
               </Button>
-            </div>
-            
-            {/* Trust Indicator */}
-            <div className="pt-2">
-              <p className="inline-flex items-center text-sm text-warm-gray-600 bg-warm-gray-50 px-4 py-2.5 rounded-lg">
-                <span className="mr-2">💰</span>
-                <span><strong className="font-semibold text-charcoal">Investment Guarantee:</strong> If my architecture audit doesn't identify improvements worth 10x the cost, you get a full refund.</span>
-              </p>
-            </div>
-          </div>
-          
-          {/* Professional Photo */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              <div className="absolute -inset-4 bg-gradient-to-r from-electric-blue/20 to-transparent rounded-3xl -rotate-3 -z-10"></div>
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl border-8 border-white">
-                <img 
-                  src="/lovable-uploads/9ec68f06-cbc4-485b-80aa-e001613e2049.png"
-                  alt="Gilles Barbier - Workflow Orchestration Expert"
-                  className="w-full h-auto object-cover animate-scale-in"
-                  loading="eager"
-                />
-                {/* Decorative elements */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-electric-blue/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-              </div>
-              {/* Floating tech badges */}
-              <div className="absolute -bottom-6 -left-6 bg-white px-4 py-2 rounded-full shadow-lg border border-warm-gray-100 flex items-center">
-                <div className="w-2 h-2 bg-success-green rounded-full mr-2"></div>
-                <span className="text-sm font-mono text-warm-gray-700">50M+ executions/mo</span>
-              </div>
             </div>
           </div>
         </div>
@@ -96,9 +93,7 @@ const HeroSection = () => {
       
       {/* Sticky mobile CTA */}
       <StickyCTA onClick={handleCTAClick} className="lg:hidden" />
-      
-      {/* Section divider */}
-      <SectionDivider variant="gradient" />
+
     </section>
   );
 };
