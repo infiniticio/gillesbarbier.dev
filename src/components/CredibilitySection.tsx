@@ -40,7 +40,7 @@ const LemlineLogo = () => (
 const CredibilitySection = () => {
   // Animated metrics config
   const metrics = [
-    { number: 5, label: "Years with AI Tools", description: "Since GPT-3 in 2020", prefix: '', suffix: '+', duration: 1.5 },
+    { number: 3, label: "Years with AI Tools", description: "Since GPT-3 in 2022", prefix: '', suffix: '+', duration: 1.5 },
     { number: '50M', label: "Executions Built", description: "Production systems at scale", prefix: '', suffix: '', duration: 0 },
     { number: 3, label: "Workflow Engines", description: "Built from scratch", prefix: '', suffix: '', duration: 1.5 },
     { number: 60, label: "Productivity Gain", description: "Reported by trained teams", prefix: '', suffix: '%', duration: 1.5 }

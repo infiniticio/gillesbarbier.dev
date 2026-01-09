@@ -1,0 +1,1133 @@
+{
+  "type": "result",
+  "files": [
+    {
+      "path": "server.js",
+      "language": "javascript",
+      "layer": "other",
+      "imports": [
+        "node:fs/promises",
+        "express",
+        "compression",
+        "sirv"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "layer": "other",
+      "imports": [
+        "tailwindcss"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "scripts/prerender.js",
+      "language": "javascript",
+      "layer": "other",
+      "imports": [
+        "node:fs/promises",
+        "../dist/server/entry-server.js"
+      ],
+      "exports": [],
+      "functions": [
+        "prerender"
+      ],
+      "classes": []
+    },
+    {
+      "path": "eslint.config.js",
+      "language": "javascript",
+      "layer": "other",
+      "imports": [
+        "@eslint/js",
+        "globals",
+        "eslint-plugin-react-hooks",
+        "eslint-plugin-react-refresh",
+        "typescript-eslint"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "layer": "other",
+      "imports": [
+        "vite",
+        "@vitejs/plugin-react-swc",
+        "path"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "layer": "other",
+      "imports": [],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "layer": "other",
+      "imports": [
+        "@/components/ui/tooltip",
+        "@tanstack/react-query",
+        "./pages/Index"
+      ],
+      "exports": [],
+      "functions": [
+        "App"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/entry-client.tsx",
+      "language": "tsx",
+      "layer": "other",
+      "imports": [
+        "react-dom/client",
+        "./App.tsx"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/aspect-ratio.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@radix-ui/react-aspect-ratio"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/alert-dialog.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-alert-dialog",
+        "@/lib/utils",
+        "@/components/ui/button"
+      ],
+      "exports": [],
+      "functions": [
+        "AlertDialogHeader",
+        "AlertDialogFooter"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/pagination.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/utils",
+        "@/components/ui/button"
+      ],
+      "exports": [],
+      "functions": [
+        "Pagination",
+        "PaginationLink",
+        "PaginationPrevious",
+        "PaginationNext",
+        "PaginationEllipsis"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-tabs",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/slider.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-slider",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/popover.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-popover",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/progress.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-progress",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/toaster.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/hooks/use-toast"
+      ],
+      "exports": [
+        "Toaster"
+      ],
+      "functions": [
+        "Toaster"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/input-otp.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "input-otp",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/chart.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "recharts",
+        "@/lib/utils"
+      ],
+      "exports": [
+        "ChartConfig"
+      ],
+      "functions": [
+        "useChart",
+        "ChartStyle",
+        "getPayloadConfigFromPayload"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/hover-card.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-hover-card",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/sheet.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@radix-ui/react-dialog",
+        "class-variance-authority",
+        "lucide-react",
+        "react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "SheetHeader",
+        "SheetFooter"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/scroll-area.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-scroll-area",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/resizable.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "lucide-react",
+        "react-resizable-panels",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "ResizablePanelGroup",
+        "ResizableHandle"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-label",
+        "class-variance-authority",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/sonner.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "next-themes",
+        "sonner"
+      ],
+      "exports": [],
+      "functions": [
+        "Toaster"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/navigation-menu.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-navigation-menu",
+        "class-variance-authority",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/accordion.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-accordion",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/SectionDivider.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/lib/utils"
+      ],
+      "exports": [
+        "SectionDivider"
+      ],
+      "functions": [
+        "SectionDivider"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/drawer.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "vaul",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "Drawer",
+        "DrawerHeader",
+        "DrawerFooter"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/tooltip.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-tooltip",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/alert.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "class-variance-authority",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/use-toast.ts",
+      "language": "typescript",
+      "layer": "ui",
+      "imports": [
+        "@/hooks/use-toast"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/switch.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-switch",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/calendar.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "lucide-react",
+        "react-day-picker",
+        "@/lib/utils",
+        "@/components/ui/button"
+      ],
+      "exports": [
+        "CalendarProps"
+      ],
+      "functions": [
+        "Calendar"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/breadcrumb.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "BreadcrumbSeparator",
+        "BreadcrumbEllipsis"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/radio-group.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-radio-group",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/command.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-dialog",
+        "cmdk",
+        "lucide-react",
+        "@/lib/utils",
+        "@/components/ui/dialog"
+      ],
+      "exports": [],
+      "functions": [
+        "CommandDialog",
+        "CommandShortcut"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/toggle-group.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-toggle-group",
+        "class-variance-authority",
+        "@/lib/utils",
+        "@/components/ui/toggle"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/avatar.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-avatar",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/menubar.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-menubar",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "MenubarShortcut"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-dialog",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/badge.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "class-variance-authority",
+        "@/lib/utils"
+      ],
+      "exports": [
+        "BadgeProps"
+      ],
+      "functions": [
+        "Badge"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/sidebar.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "lucide-react",
+        "@/hooks/use-mobile",
+        "@/lib/utils",
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/separator",
+        "@/components/ui/sheet",
+        "@/components/ui/skeleton"
+      ],
+      "exports": [],
+      "functions": [
+        "useSidebar",
+        "handleKeyDown"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/table.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-separator",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "@/lib/utils"
+      ],
+      "exports": [
+        "ButtonProps"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/toggle.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-toggle",
+        "class-variance-authority",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/toast.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-toast",
+        "class-variance-authority",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/checkbox.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-checkbox",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/collapsible.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@radix-ui/react-collapsible"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/dropdown-menu.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-dropdown-menu",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "DropdownMenuShortcut"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/select.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-select",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@/lib/utils"
+      ],
+      "exports": [
+        "TextareaProps"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/skeleton.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "Skeleton"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/context-menu.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-context-menu",
+        "lucide-react",
+        "@/lib/utils"
+      ],
+      "exports": [],
+      "functions": [
+        "ContextMenuShortcut"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/form.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "@/lib/utils",
+        "@/components/ui/label"
+      ],
+      "exports": [],
+      "functions": [
+        "useFormField"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ui/carousel.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/utils",
+        "@/components/ui/button"
+      ],
+      "exports": [],
+      "functions": [
+        "useCarousel"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/CTASection.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/components/ui/button",
+        "lucide-react",
+        "lucide-react",
+        "lucide-react"
+      ],
+      "exports": [],
+      "functions": [
+        "CTASection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ProblemSection.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react"
+      ],
+      "exports": [],
+      "functions": [
+        "ProblemSection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/CredibilitySection.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/components/ui/card",
+        "react"
+      ],
+      "exports": [],
+      "functions": [
+        "CountUp",
+        "step",
+        "ZenatonLogo",
+        "InfiniticLogo",
+        "LemlineLogo",
+        "CredibilitySection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/FAQSection.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react",
+        "@/components/ui/accordion",
+        "lucide-react",
+        "react"
+      ],
+      "exports": [],
+      "functions": [
+        "FAQSection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [],
+      "exports": [],
+      "functions": [
+        "Footer"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/StickyCTA.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "./ui/button",
+        "@/lib/utils"
+      ],
+      "exports": [
+        "StickyCTA"
+      ],
+      "functions": [
+        "StickyCTA"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ServicesSection.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/components/ui/card"
+      ],
+      "exports": [],
+      "functions": [
+        "AuditIcon",
+        "MigrationIcon",
+        "BuildIcon",
+        "ScaleIcon",
+        "ServicesSection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/HeroSection.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/components/ui/button",
+        "./StickyCTA"
+      ],
+      "exports": [],
+      "functions": [
+        "HeroSection",
+        "handleCTAClick"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/entry-server.tsx",
+      "language": "tsx",
+      "layer": "other",
+      "imports": [
+        "react-dom/server",
+        "./App"
+      ],
+      "exports": [
+        "render"
+      ],
+      "functions": [
+        "render"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "language": "typescript",
+      "layer": "other",
+      "imports": [],
+      "exports": [],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/hooks/use-mobile.tsx",
+      "language": "tsx",
+      "layer": "other",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "useIsMobile"
+      ],
+      "functions": [
+        "useIsMobile",
+        "onChange"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/hooks/use-toast.ts",
+      "language": "typescript",
+      "layer": "other",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "reducer"
+      ],
+      "functions": [
+        "genId",
+        "addToRemoveQueue",
+        "dispatch",
+        "toast",
+        "update",
+        "dismiss",
+        "useToast"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "language": "typescript",
+      "layer": "util",
+      "imports": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "exports": [
+        "cn",
+        "formatNumber",
+        "generateId",
+        "debounce",
+        "formatRelativeTime",
+        "truncate",
+        "isBrowser",
+        "getCookie",
+        "setCookie",
+        "removeCookie",
+        "getRandomColor"
+      ],
+      "functions": [
+        "cn",
+        "formatNumber",
+        "generateId",
+        "export",
+        "debounce",
+        "formatRelativeTime",
+        "truncate",
+        "getCookie",
+        "setCookie",
+        "removeCookie",
+        "getRandomColor",
+        "copyToClipboard"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/pages/Index.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "@/components/HeroSection",
+        "@/components/ProblemSection",
+        "@/components/ServicesSection",
+        "@/components/CredibilitySection",
+        "@/components/CTASection",
+        "@/components/Footer"
+      ],
+      "exports": [],
+      "functions": [
+        "Index"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/pages/NotFound.tsx",
+      "language": "tsx",
+      "layer": "ui",
+      "imports": [
+        "react-router-dom",
+        "react"
+      ],
+      "exports": [],
+      "functions": [
+        "NotFound"
+      ],
+      "classes": []
+    }
+  ],
+  "layers": {
+    "other": 12,
+    "ui": 60,
+    "util": 1
+  },
+  "domains": [
+    {
+      "name": "components",
+      "fileCount": 58,
+      "layer": "ui"
+    },
+    {
+      "name": "root",
+      "fileCount": 10,
+      "layer": "other"
+    },
+    {
+      "name": "hooks",
+      "fileCount": 2,
+      "layer": "other"
+    },
+    {
+      "name": "pages",
+      "fileCount": 2,
+      "layer": "ui"
+    }
+  ],
+  "timestamp": "2026-01-09T14:22:47.564Z"
+}

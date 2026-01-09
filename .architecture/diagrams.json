@@ -1,0 +1,46 @@
+{
+  "generated": "2026-01-09T14:22:47.573Z",
+  "hash": "mk6yu5g5",
+  "diagrams": [
+    {
+      "id": "layer-overview",
+      "category": "layers",
+      "title": "Layer Architecture",
+      "description": "73 files across 3 layers",
+      "mermaid": "graph TD\n    Ui[\"🎨 Ui<br/>60 files\"]\n    Util[\"🔧 Util<br/>1 files\"]\n    Other[\"📁 Other<br/>12 files\"]\n    style Ui fill:#8b5cf6,color:#fff\n    style Util fill:#6b7280,color:#fff\n",
+      "labels": [
+        "architecture",
+        "layers",
+        "auto"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "domain-overview",
+      "category": "domains",
+      "title": "Domain Structure",
+      "description": "4 domains detected",
+      "mermaid": "graph LR\n    components[\"🎨 components<br/>58 files\"]\n    root[\"📁 root<br/>10 files\"]\n    hooks[\"📁 hooks<br/>2 files\"]\n    pages[\"🎨 pages<br/>2 files\"]\n    components -.-> root\n    hooks -.-> pages\n",
+      "labels": [
+        "domains",
+        "structure",
+        "auto"
+      ],
+      "priority": 90
+    },
+    {
+      "id": "layer-dependencies",
+      "category": "dependencies",
+      "title": "Layer Dependencies",
+      "description": "How layers depend on each other",
+      "mermaid": "graph LR\n    Other((Other))\n    Ui((Ui))\n    Other --> Ui\n",
+      "labels": [
+        "dependencies",
+        "layers",
+        "auto"
+      ],
+      "priority": 80
+    }
+  ],
+  "summary": "3 diagrams"
+}
