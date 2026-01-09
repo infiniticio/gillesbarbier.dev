@@ -3,11 +3,11 @@ import * as React from "react";
 
 const ProblemSection = () => {
   const painPoints = [
-    "Revenue-critical workflows that fail silently (payment processing, user onboarding, data pipelines)",
-    "Engineering velocity that slows to a crawl as teams fear touching interconnected services",
-    "Customer trust eroding with each \"temporary glitch\" that takes hours to diagnose",
-    "Debugging nightmares where failures cascade across services with no clear root cause",
-    "Business processes scattered across codebases, impossible to understand or modify"
+    "Teams using AI tools superficially—autocomplete only, missing 90% of what's possible",
+    "Inconsistent adoption where some engineers thrive while others fall behind",
+    "Best engineers leaving for companies with AI-first workflows and modern tooling",
+    "Competitors shipping faster with smaller teams using AI-augmented development",
+    "Generic AI courses that don't translate to your production codebase"
   ];
 
   // Custom SVG for the divider
@@ -20,18 +20,18 @@ const ProblemSection = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">
-  <span className="block">Your Architecture Is Scaling.</span>
-  <span className="block">Your Reliability Isn't.</span>
+  <span className="block">Your Team Has AI Tools.</span>
+  <span className="block">They're Using 10% of Them.</span>
 </h2>
           <p className="text-xl text-charcoal leading-relaxed max-w-3xl mx-auto">
-            Modern tech stacks grow fast—complexity grows faster. What started as a clean microservices 
-            architecture becomes a tangled web of dependencies, race conditions, and mysterious failures.
+            AI won't replace engineers. But engineers using AI will replace engineers who don't.
+            The gap between AI-native teams and everyone else is widening every month.
           </p>
         </div>
         
         <div className="bg-white rounded-xl p-8 shadow-xl border border-amber-100 animate-fade-in">
           <h3 className="text-2xl font-semibold text-charcoal mb-8 text-center">
-            You're probably losing sleep over:
+            Sound familiar?
           </h3>
           <div className="space-y-7">
             {painPoints.map((point, index) => {
@@ -64,11 +64,11 @@ const ProblemSection = () => {
                 </svg>
               </div>
               <div>
-                <div className="text-lg font-bold text-charcoal mb-1">The real cost of ignoring these issues?</div>
+                <div className="text-lg font-bold text-charcoal mb-1">The real cost of waiting?</div>
                 <p className="text-charcoal">
-                  Every day of <span className="font-semibold text-amber-700">architectural debt compounds</span>. 
-                  What takes <span className="font-semibold">2 weeks to fix today</span> will take 
-                  <span className="font-semibold"> 2 months next year</span>.
+                  Every month your team spends in <span className="font-semibold text-amber-700">"wait and see" mode</span>,
+                  your competitors pull further ahead. The skills gap <span className="font-semibold">compounds</span>—and so does
+                  <span className="font-semibold"> the cost of catching up</span>.
                 </p>
               </div>
             </div>

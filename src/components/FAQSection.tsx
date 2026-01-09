@@ -6,24 +6,24 @@ import { useState } from "react";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "How do I know this investment will pay off?",
-      answer: "Every audit comes with a 10x ROI guarantee. If I don't identify improvements worth at least 10x your investment, you get a full refund. Most clients see measurable results within 30 days."
+      question: "We already use Copilot. Why do we need training?",
+      answer: "Most teams use 10% of what AI tools can do. Copilot autocomplete is just the beginning—training unlocks AI-assisted architecture design, code review, debugging, and documentation. The difference between using AI and being AI-native is enormous."
     },
     {
-      question: "Do you only work with specific tech stacks?",
-      answer: "I am technology-agnostic but opinionated about patterns. Whether you're on AWS/Azure/GCP, Node.js/Python/Java, or Kafka/Pulsar/EventBridge—good orchestration principles apply universally."
+      question: "Will this work for our tech stack?",
+      answer: "Yes. AI-first principles apply across languages and frameworks. Whether you're working in Python, TypeScript, Go, or Java—I customize all exercises for your specific technologies and codebase."
     },
     {
-      question: "What if you're not available when we need ongoing support?",
-      answer: "All projects include comprehensive documentation and team knowledge transfer. Plus, I maintain a network of vetted specialists who can continue implementation using my blueprints."
+      question: "How do you measure success?",
+      answer: "We establish baselines before training (cycle time, PR velocity, time-to-merge) and measure improvement at 30, 60, and 90 days. Teams typically report 40-60% productivity gains within the first month."
     },
     {
-      question: "How do you handle confidential/proprietary systems?",
-      answer: "Full NDAs are standard. I have worked with financial trading systems, healthcare data pipelines, and other highly sensitive environments. Security and confidentiality are non-negotiable."
+      question: "What about code quality and security?",
+      answer: "A core module covers AI-safe coding practices. This includes review workflows for AI-generated code, security considerations, and quality gates. Your team learns to use AI as a multiplier without compromising standards."
     },
     {
-      question: "What if my team lacks orchestration experience?",
-      answer: "I include extensive knowledge transfer in every engagement. Your team will understand not just what we built, but why—so they can maintain and extend it confidently. Training materials and documentation included."
+      question: "Can we start with a pilot team?",
+      answer: "Absolutely. Most organizations start with one team, measure results, then expand. The Executive Briefing is also a great low-commitment way to understand what AI-first development looks like before investing in full team training."
     }
   ];
 
@@ -35,7 +35,7 @@ const FAQSection = () => {
       <div className="text-center mb-12">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">Frequently Asked Questions</h2>
         <p className="text-xl text-warm-gray">
-          Common questions from CTOs and VPs Engineering
+          Common questions from engineering leaders
         </p>
       </div>
       <div className="bg-[#f8fbff] border border-blue-100 rounded-3xl shadow-2xl overflow-hidden">

@@ -40,10 +40,10 @@ const LemlineLogo = () => (
 const CredibilitySection = () => {
   // Animated metrics config
   const metrics = [
-    { number: '50M', label: "Executions Monthly", description: "Across 100+ companies", prefix: '', suffix: '', duration: 0 },
-    { number: 99.9, label: "Uptime Achieved", description: "In production systems", prefix: '', suffix: '%', duration: 2 },
-    { number: 3, label: "Workflow Engines Built", description: "From scratch to scale", prefix: '', suffix: '', duration: 1.5 },
-    { number: 90, label: "Failure Reduction", description: "Average client improvement", prefix: '', suffix: '%', duration: 1.5 }
+    { number: 5, label: "Years with AI Tools", description: "Since GPT-3 in 2020", prefix: '', suffix: '+', duration: 1.5 },
+    { number: '50M', label: "Executions Built", description: "Production systems at scale", prefix: '', suffix: '', duration: 0 },
+    { number: 3, label: "Workflow Engines", description: "Built from scratch", prefix: '', suffix: '', duration: 1.5 },
+    { number: 60, label: "Productivity Gain", description: "Reported by trained teams", prefix: '', suffix: '%', duration: 1.5 }
   ];
 
   // Logo grid config
@@ -76,10 +76,10 @@ const CredibilitySection = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">
-            I've Built What You Need—From Scratch, Three Times
+            I Don't Teach Theory. I Train From the Trenches.
           </h2>
           <p className="text-xl text-warm-gray max-w-3xl mx-auto">
-            Most consultants apply theory. I've built the engines myself.
+            I've been using AI coding tools daily since GPT-3. Now I help teams unlock the same productivity gains.
           </p>
         </div>
         {/* Metrics */}
@@ -99,7 +99,7 @@ const CredibilitySection = () => {
         {/* Logo grid (Production Track Record) */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-navy text-center mb-12">
-            My Track Record:
+            Built at Scale:
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-20">
             {projects.map((project, i) => (
@@ -135,8 +135,8 @@ const CredibilitySection = () => {
         </div>
         <div className="mt-12 text-center">
           <p className="text-lg text-charcoal max-w-3xl mx-auto">
-            <strong className="text-navy">The difference?</strong> I don't just know the patterns—I understand their failure modes, 
-            performance characteristics, and real-world trade-offs. I've debugged the edge cases your team hasn't hit yet.
+            <strong className="text-navy">The difference?</strong> I understand how AI tools actually work in production environments—
+            the patterns that scale, the pitfalls to avoid, and how to integrate AI into real engineering workflows.
           </p>
         </div>
       </div>
