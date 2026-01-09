@@ -31,7 +31,7 @@ const HeroSection = () => {
                 >
                   <img 
                     src="/uploads/gilles.png"
-                    alt="Gilles Barbier - Workflow Orchestration Expert"
+                    alt="Gilles Barbier - AI-First Engineering Trainer"
                     className="w-full h-full object-cover animate-scale-in"
                     loading="eager"
                   />
@@ -56,16 +56,16 @@ const HeroSection = () => {
             
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Turn Your Failing Microservices Into&nbsp;
+              Transform Your Engineering Team Into&nbsp;
               <br className="block sm:hidden" />
-              <span className="text-gradient">Reliable Revenue Engines</span>
+              <span className="text-gradient">AI-Native Builders</span>
             </h1>
-            
+
             {/* Subheadline */}
             <p className="text-base sm:text-xl text-[#333b4f] leading-relaxed max-w-2xl mb-6 mx-auto lg:mx-0">
-              I'm <strong className="text-charcoal font-semibold">Gilles Barbier</strong>. I've built 3 production workflow engines processing&nbsp;
-              <span className="font-mono font-semibold text-electric-blue">50M+ executions monthly</span>.
-              Now I help scale-ups design orchestration systems that actually scale—without the chaos.
+              I'm <strong className="text-charcoal font-semibold">Gilles Barbier</strong>. I train engineering teams to work with AI—not just use it.
+              Hands-on workshops that turn your developers into&nbsp;
+              <span className="font-mono font-semibold text-electric-blue">2-5x more productive</span> AI-augmented engineers.
             </p>
             
             {/* CTA Buttons */}
@@ -82,7 +82,7 @@ const HeroSection = () => {
                   className="flex items-center"
                 >
                   <span className="mr-3 block sm:hidden">Book Your Free Assessment</span>
-                  <span className="mr-3 hidden sm:block">Book Your Free Architecture Assessment</span>
+                  <span className="mr-3 hidden sm:block">Book Your Free AI Readiness Assessment</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
                 </a>
               </Button>

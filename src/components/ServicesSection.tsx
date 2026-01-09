@@ -2,52 +2,56 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 // Custom SVG Icons
-const AuditIcon = () => (
-  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>
+const BootcampIcon = () => (
+  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>
 );
-const MigrationIcon = () => (
-  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+const TransformIcon = () => (
+  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 11-9-9" /><path d="M21 3v9h-9" /></svg>
 );
-const BuildIcon = () => (
-  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+const BriefingIcon = () => (
+  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg>
 );
-const ScaleIcon = () => (
-  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 20h16M4 4h16M9 4v16M15 4v16" /></svg>
+const CoachingIcon = () => (
+  <svg className="w-8 h-8 text-electric-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></svg>
 );
 
 const ServicesSection = () => {
   const services = [
     {
-      title: "1-Week Architecture Deep Dive",
-      price: "€5,000+",
-      timeframe: "1 week",
-      description: "Complete system audit with prioritized action plan and ROI projections. Clients typically see actionable improvements worth 10x the investment within 30 days.",
-      icon: <AuditIcon />,
-      features: ["System audit", "Prioritized action plan", "ROI projections", "30-day implementation timeline"]
+      title: "AI-First Engineering Bootcamp",
+      price: "€8,000 - €15,000",
+      timeframe: "2 days",
+      description: "Intensive hands-on workshop where your team learns AI-augmented workflows using your actual codebase. Skills transfer that sticks.",
+      icon: <BootcampIcon />,
+      features: ["Claude, Cursor, OpenCode workflows", "Context engineering", "AI-assisted code review", "Security best practices"],
+      badge: "Most Popular"
     },
     {
-      title: "4-Week Migration Blueprint",
-      price: "€18,000+",
+      title: "AI Transformation Program",
+      price: "€12,000 - €18,000",
       timeframe: "4 weeks",
-      description: "Step-by-step transition plan from your current setup to bulletproof orchestration. No big-bang rewrites—just smart, incremental improvements.",
-      icon: <MigrationIcon />,
-      features: ["Migration strategy", "Incremental improvements", "Measurable milestones", "Risk mitigation plan"]
+      description: "Full-day kickoff + 3 weekly sessions + async support. Build a self-sustaining AI-first culture with internal champions.",
+      icon: <TransformIcon />,
+      features: ["Pre-training assessment", "Weekly coaching sessions", "Custom playbooks", "30/60/90 day measurement"],
+      badge: null
     },
     {
-      title: "Implementation Partnership",
-      price: "€1,200/day",
-      timeframe: "Custom",
-      description: "Hands-on design and development of your most critical workflows. I build it right the first time, with observability and resilience baked in.",
-      icon: <BuildIcon />,
-      features: ["Hands-on development", "Critical workflow design", "Built-in observability", "Resilience patterns"]
+      title: "Executive AI Briefing",
+      price: "€3,000",
+      timeframe: "Half-day",
+      description: "What is AI-first development? Why it matters now. How to make the switch. Live demos and a practical framework for your org.",
+      icon: <BriefingIcon />,
+      features: ["State of AI in development", "Competitive landscape", "Adoption roadmap", "ROI framework"],
+      badge: null
     },
     {
-      title: "Scale-Up Preparation",
-      price: "€14,000+",
-      timeframe: "3-4 weeks",
-      description: "Architecture review before major hiring phases. Ensure your foundations can handle 10x growth without breaking.",
-      icon: <ScaleIcon />,
-      features: ["Growth readiness audit", "6-month roadmap", "Team training", "Scaling guidelines"]
+      title: "Ongoing AI Coaching",
+      price: "€4,000/month",
+      timeframe: "Monthly retainer",
+      description: "2x 90-min group sessions + async support + leadership check-ins. Keep your team on the cutting edge as AI tools evolve.",
+      icon: <CoachingIcon />,
+      features: ["Bi-weekly coaching", "Slack/Discord access", "Tool updates", "Quarterly reviews"],
+      badge: null
     }
   ];
 
@@ -56,11 +60,11 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-navy mb-8">
-            I Design Systems That Scale Under Pressure
+            Training Programs That Actually Work
           </h2>
           <p className="text-xl text-charcoal max-w-3xl mx-auto">
-            I don't just apply patterns—I architect solutions that have survived real-world production stress. 
-            From payment processing at fintech scale to ML pipelines handling terabytes daily.
+            I don't teach theory—I train from the trenches. Hands-on workshops using your codebase,
+            your stack, your real challenges. Your team leaves with skills they'll use on day one.
           </p>
         </div>
         
@@ -72,10 +76,16 @@ const ServicesSection = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-12 relative z-10">
             {services.map((service, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="group relative bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-lg overflow-hidden transition-all duration-300 hover:scale-[1.05] hover:border-electric-blue/30 animate-fade-in"
               >
+                {/* Badge */}
+                {service.badge && (
+                  <div className="absolute top-4 right-4 bg-electric-blue text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                    {service.badge}
+                  </div>
+                )}
                 {/* Hover effect background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-electric-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <CardHeader>

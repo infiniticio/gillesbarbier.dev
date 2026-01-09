@@ -10,11 +10,11 @@ const CTASection = () => {
       <div className="absolute inset-0 pointer-events-none opacity-10" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'30\\' viewBox=\\'0 0 60 30\\' fill=\\'none\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Ccircle cx=\\'15\\' cy=\\'15\\' r=\\'14\\' stroke=\\'%233182ce\\' stroke-opacity=\\'0.10\\' stroke-width=\\'2\\'/%3E%3Crect x=\\'35\\' y=\\'5\\' width=\\'20\\' height=\\'20\\' rx=\\'5\\' stroke=\\'%233182ce\\' stroke-opacity=\\'0.07\\' stroke-width=\\'2\\'/%3E%3C/svg%3E')", backgroundRepeat: 'repeat', backgroundSize: '120px 60px'}}></div>
       <div className="max-w-3xl mx-auto relative z-10">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-8 text-center drop-shadow-lg">
-          Get Your Free Architecture Assessment
+          Book Your Free AI Readiness Assessment
         </h2>
         <p className="text-xl text-blue-100 mb-10 text-center max-w-2xl mx-auto">
-          30-minute Architecture Assessment with Me to diagnose your specific scaling bottlenecks. 
-          I'll identify your 3 biggest workflow risks and the exact fixes needed—completely free.
+          30-minute call to evaluate your team's AI maturity and identify quick wins.
+          I'll show you exactly where your team can unlock productivity gains—completely free.
         </p>
         
         <div className="bg-white/80 rounded-2xl p-12 mb-16 shadow-2xl">
@@ -24,22 +24,22 @@ const CTASection = () => {
             <li className="flex items-start gap-3">
               <Check className="w-6 h-6 text-sky-500 mt-1 flex-shrink-0" />
               <div>
-                <span className="font-bold text-navy">Clear roadmap</span>
-                <p className="text-gray-700 text-sm">if we decide to work together</p>
+                <span className="font-bold text-navy">AI maturity assessment</span>
+                <p className="text-gray-700 text-sm">Where does your team stand today?</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-6 h-6 text-sky-500 mt-1 flex-shrink-0" />
               <div>
-                <span className="font-bold text-navy">Actionable workflow insights</span>
-                <p className="text-gray-700 text-sm">Pinpoint your 3 biggest bottlenecks</p>
+                <span className="font-bold text-navy">Quick wins identified</span>
+                <p className="text-gray-700 text-sm">Actionable improvements you can start now</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-6 h-6 text-sky-500 mt-1 flex-shrink-0" />
               <div>
-                <span className="font-bold text-navy">Scaling & reliability fixes</span>
-                <p className="text-gray-700 text-sm">Specific, proven solutions</p>
+                <span className="font-bold text-navy">Training roadmap</span>
+                <p className="text-gray-700 text-sm">Clear path to AI-native workflows</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -59,7 +59,7 @@ const CTASection = () => {
             >
               <Calendar className="w-6 h-6 mr-2 flex-shrink-0" />
               <span className="flex-1 block sm:hidden">Book Free Assessment</span>
-                <span className="flex-1 hidden sm:block">Book Your Free Architecture Assessment</span>
+                <span className="flex-1 hidden sm:block">Book Your Free AI Readiness Assessment</span>
               <span className="ml-2 text-3xl">→</span>
             </a>
             <p className="flex items-center text-blue-900 text-xs sm:text-sm mt-3 max-w-xl mx-auto font-medium opacity-80 gap-2 text-center">
